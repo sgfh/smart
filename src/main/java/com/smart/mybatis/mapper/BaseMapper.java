@@ -1,27 +1,31 @@
 package com.smart.mybatis.mapper;
 
 
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 @Mapper
 public interface BaseMapper {
 
-    int insert(Map params);
+    int insertBatch(Map<String, Object> params);
 
-    int update(Map params);
+    int insert(Map<String, Object> params);
 
-    int delete(Map params);
+    int update(Map<String, Object> params);
 
-    HashMap findById(Map params);
+    int delete(Map<String, Object> params);
 
-    List<Map<String,Object>> list(Map params);
+    HashMap<String,Object> findById(Map<String, Object> params);
 
-    HashMap find(Map params);
+    List<Map<String,Object>> list(Map<String, Object> params);
 
-    HashMap findLinkT(Map params);
+    HashMap<String,Object> find(Map<String, Object> params);
 
-    List<Map<String,Object>> findLinkListT(Map params);
+    /**count*/
+    Integer count(Map<String, Object> params);
+
+    /**批量更新*/
+    int updateBatch(Map<String, Object> params);
 }

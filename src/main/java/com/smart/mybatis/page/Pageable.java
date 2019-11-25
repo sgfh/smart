@@ -1,7 +1,6 @@
 package com.smart.mybatis.page;
 
 import java.io.Serializable;
-
 public class Pageable implements Serializable {
 
 	/**

@@ -1,7 +1,6 @@
 package com.smart.mybatis.annotation;
 
 import java.lang.annotation.*;
-
 /**
  * @Auther: gfh
  * @Date: 2019/3/25 19:36
@@ -12,4 +11,5 @@ import java.lang.annotation.*;
 @Documented
 public @interface OneToMany {
     String value();
+    Query[] where() default {};
 }
